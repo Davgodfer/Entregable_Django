@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recomendar Animes</title>
+</head>
+<body>
+    <h1>Recomendaciones</h1>
+    <ul>
+        {% for anime in recomendaciones %}
+            <li>{{ anime.titulo }} - {{ anime.formatoEmision }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

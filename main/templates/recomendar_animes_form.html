@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recomendar Animes</title>
+</head>
+<body>
+    <h1>Recomendar Animes</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="idusuario">ID Usuario:</label>
+        <input type="text" id="idusuario" name="idusuario">
+        <label for="formato_emision">Formato de Emisión:</label>
+        <select name="formato_emision" id="formato_emision">
+            {% for formato in formatos %}
+                <option value="{{ formato }}">{{ formato }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Recomendar</button>
+    </form>
+</body>
+</html>
