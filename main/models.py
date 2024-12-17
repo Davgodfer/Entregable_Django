@@ -28,7 +28,6 @@ class Usuario(models.Model):
         ordering = ('idUsuario', )
 
 class Genero(models.Model):
-    idGenero = models.TextField(primary_key=True)
     nombre = models.TextField(verbose_name='Genero')
 
     def __str__(self):
@@ -38,7 +37,7 @@ class Genero(models.Model):
         ordering =('nombre', )
 
 class Anime(models.Model):
-    animeId = models.TextField(primary_key=True)
+    animeId = models.IntegerField(primary_key=True)
     titulo = models.TextField(verbose_name='Titulo')
     generos = models.ManyToManyField(Genero)
     formatoEmision = models.TextField(verbose_name = 'Formato de emision')
