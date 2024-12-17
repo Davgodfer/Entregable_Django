@@ -19,7 +19,7 @@ from django.urls import path
 from main import views
 
 urlpatterns = [
-    # path('', views.menu_principal, name='menu_principal'),
+    path('', views.menu_principal, name='menu_principal'),
     path('cargar_base_datos/', views.cargar_base_datos, name='cargar_base_datos'),
     # path('mostrar_registros/', views.mostrar_registros, name='mostrar_registros'),
     # path('cargar_recsys/', views.cargar_recsys, name='cargar_recsys'),
