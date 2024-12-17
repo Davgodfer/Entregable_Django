@@ -1,4 +1,3 @@
-from django.http import HttpResponse
 from django.shortcuts import render
 from django.db.models import Avg
 from main.models import Anime, Genero, Puntuacion
