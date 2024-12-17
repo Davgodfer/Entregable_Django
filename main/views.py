@@ -3,6 +3,8 @@ from django.shortcuts import render
 from django.db.models import Avg
 from main.models import Anime, Genero, Puntuacion
 
+def menu_principal(request):
+    return render(request, 'menu_principal.html')
 
 def animes_por_genero(request):
     if request.method == 'POST':
