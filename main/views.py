@@ -54,4 +54,6 @@ def cargar_base_datos(request):
                 puntuacion = int(values[2])
             )
 
-    return HttpResponse('Cargados')
+    animes = Anime.objects.all()
+    puntuaciones = Puntuacion.objects.all()
+    return render(request, 'cargar_base_datos.html', context={animes:animes, puntuaciones:puntuaciones} )

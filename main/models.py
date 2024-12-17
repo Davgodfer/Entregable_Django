@@ -46,8 +46,8 @@ class Anime(models.Model):
     numEpisodios = models.IntegerField(verbose_name= 'Numero de episodios')
 
     def __str__(self):
-        return (str(self.titulo))
-    
+        return f'Titulo: {self.titulo}, Generos {self.generos}, Emision:{self.formatoEmision}, Episodios:{str(self.numEpisodios)}'
+
     class Meta:
         ordering = ('titulo', )
 
@@ -57,7 +57,7 @@ class Puntuacion(models.Model):
     puntuacion = models.IntegerField(verbose_name='Puntuación', validators=[MinValueValidator(1), MaxValueValidator(10)])
     
     def __str__(self):
-        return (str(self.puntuacion))
+        return f'Usuario:{self.idUsuario}, Anime:{self.anime.titulo}, Puntuacion:{self.puntuacion}'
     
     class Meta:
         ordering=('anime','idUsuario', )
