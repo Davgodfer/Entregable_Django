@@ -4,6 +4,7 @@ from django.db import models
 from django.db import models
 from django.core.validators import MinValueValidator, MaxValueValidator
 
+'''
 class Ocupacion(models.Model):
     ocupacionId = models.AutoField(primary_key=True)
     nombre = models.TextField(verbose_name='Ocupación', unique=True)
@@ -26,6 +27,7 @@ class Usuario(models.Model):
     
     class Meta:
         ordering = ('idUsuario', )
+'''
 
 class Genero(models.Model):
     nombre = models.TextField(verbose_name='Genero')
@@ -51,12 +53,12 @@ class Anime(models.Model):
 
 class Puntuacion(models.Model):
     idUsuario = models.IntegerField()
-    animeId = models.ForeignKey(Anime,on_delete=models.CASCADE)
+    anime = models.ForeignKey(Anime,on_delete=models.CASCADE)
     puntuacion = models.IntegerField(verbose_name='Puntuación', validators=[MinValueValidator(1), MaxValueValidator(10)])
     
     def __str__(self):
         return (str(self.puntuacion))
     
     class Meta:
-        ordering=('animeId','idUsuario', )
+        ordering=('anime','idUsuario', )
     
