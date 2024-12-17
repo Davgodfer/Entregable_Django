@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Animes por Género</title>
+</head>
+<body>
+    <h1>Animes del género {{ genero }}</h1>
+    <ul>
+        {% for anime in animes %}
+            <li>{{ anime.titulo }} - {{ anime.formatoEmision }} - {{ anime.numEpisodios }} episodios</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

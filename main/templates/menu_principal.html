@@ -1,0 +1,17 @@
+<!-- templates/menu_principal.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Menú Principal</title>
+</head>
+<body>
+    <h1>Menú Principal</h1>
+    <ul>
+        <li><a href="{% url 'cargar_base_datos' %}">Cargar Base de Datos</a></li>
+        <li><a href="{% url 'cargar_recsys' %}">Cargar RecSys</a></li>
+        <li><a href="{% url 'animes_por_genero' %}">Animes por Género</a></li>
+        <li><a href="{% url 'mejores_animes' %}">Mejores Animes</a></li>
+        <li><a href="{% url 'recomendar_animes' %}">Recomendar Animes</a></li>
+    </ul>
+</body>
+</html>

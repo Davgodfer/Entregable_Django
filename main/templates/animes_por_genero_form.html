@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Animes por Género</title>
+</head>
+<body>
+    <h1>Animes por Género</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="genero">Género:</label>
+        <select name="genero" id="genero">
+            {% for genero in generos %}
+                <option value="{{ genero }}">{{ genero }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Buscar</button>
+    </form>
+</body>
+</html>
