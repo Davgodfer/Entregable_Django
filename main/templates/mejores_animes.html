@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mejores Animes</title>
+</head>
+<body>
+    <h1>Mejores Animes</h1>
+    <ul>
+        {% for anime in animes %}
+            <li>{{ anime.titulo }} - Puntuación Media: {{ anime.puntuacion_media }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
