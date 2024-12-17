@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.db.models import Avg
+from main.models import *
 
 def animes_por_genero(request):
     if request.method == 'POST':
